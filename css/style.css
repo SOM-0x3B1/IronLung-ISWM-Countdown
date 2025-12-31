@@ -1,0 +1,240 @@
+:root {
+    --background01: rgb(11, 12, 10);
+    --foreground01: rgb(96, 167, 102);
+    --foreground02: rgb(255, 206, 206);
+    --shadow: 0 0 25pt var(--foreground01), 0 0 10pt var(--foreground01), 0 0 2pt var(--foreground01);
+    --shadow-low: 0 0 10pt var(--foreground01);
+    --shadow-bg: 0 0 20pt var(--background01);
+}
+
+@font-face {
+    font-family: 'disposabledroid_bbregular';
+    src: url('font/disposabledroid-bb.regular-webfont.woff2') format('woff2'),
+        url('font/disposabledroid-bb.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*::selection {
+    color: var(--background01);
+    background-color: var(--foreground01);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    vertical-align: middle;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    font-size: 12pt;
+    font-family: 'Courier', monospace;
+    letter-spacing: 1pt;
+    text-shadow: var(--shadow);
+
+    color: var(--foreground01);
+    background-color: black;
+}
+
+a:any-link {
+    color: var(--foreground01);
+}
+
+#screen {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;
+    width: 100vw;*/
+    height: 90vh;
+    max-width: 95vw;
+    max-height: 100vh;
+    aspect-ratio: 5/4;
+
+    overflow: hidden;
+
+    border-radius: 8vh;
+    background-color: var(--background01);
+    box-shadow: inset 0 0 1vw black, inset 0 0 2vw black, inset 0 0 4vw black, inset 0 0 6vw black;
+}
+
+
+.dirty::before {
+    height: 92vh;
+    width: 95vw;
+    background-image: url('../media/old_screen_overlay.png');
+    background-size: cover;
+    content: "";
+    position: fixed;
+    display: inline-block;
+    pointer-events: none
+}
+
+main {
+    position: relative;
+    display: inline;
+    width: 90%;
+}
+
+#fullTitle {
+    display: block;
+}
+
+.cTitle {
+    text-align: center;
+    width: 100%;
+}
+
+#cTitle2 {
+    display: inline-block;
+    text-indent: 1ex;
+}
+
+#cursor {
+    display: none;
+    height: 14pt;
+    width: 10pt;
+    margin-left: 1ex;
+    transform: translate(0, 10%);
+
+    background-color: var(--foreground01);
+    border-radius: 2pt;
+    box-shadow: var(--shadow);
+
+    opacity: 1;
+    /*animation: blink 1s infinite;*/
+}
+
+#bgvid,
+#bgpic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0.2;
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+#btmright {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1ex;
+}
+
+#btmright div {
+    display: inline;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#btmright div:hover {
+    opacity: 1;
+}
+
+#fullscreen {
+    display: inline;
+    font-size: 25pt;
+    cursor: pointer;
+}
+
+
+#volume {
+    display: inline;
+    width: 10em;
+}
+
+#volumeLabel {
+    margin-left: 2em;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.5ex;
+    background: var(--foreground01);
+    outline: none;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1ex;
+    height: 2.5ex;
+    background: var(--foreground01);
+    border-radius: 0;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 1ex;
+    height: 2.5ex;
+    background: var(--foreground01);
+    border-radius: 0;
+}
+
+
+
+
+#urls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    margin: 2ex;
+}
+
+#urls a {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#urls a:hover {
+    opacity: 1;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

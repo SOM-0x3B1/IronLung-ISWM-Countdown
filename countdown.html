@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Iron Lung Countdown</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/connect.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+    <link rel="stylesheet" href="css/etr.css">
+    <link rel="stylesheet" href="css/crt.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../media/Ethernet_card.png">
+
+    <meta name="description" content="An ISWM styled progress bar for Markiplier's Iron Lung movie">
+    <meta name="keywords"
+        content="markiplier, iron lung, in space with markiplier, ISWM, movie countdown, time, progress bar">
+
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.onekilobit.eu/iron-lung/countdown">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Iron Lung Countdown">
+    <meta property="og:description" content="An ISWM styled progress bar for Markiplier's Iron Lung movie">
+    <meta property="og:image" content="https://www.onekilobit.eu/iron-lung/media/preview.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="onekilobit.eu">
+    <meta property="twitter:url" content="https://www.onekilobit.eu/iron-lung/countdown">
+    <meta name="twitter:title" content="Iron Lung Countdown">
+    <meta name="twitter:description" content="An ISWM styled progress bar for Markiplier's Iron Lung movie">
+    <meta name="twitter:image" content="https://www.onekilobit.eu/iron-lung/media/preview.jpg">
+</head>
+
+<body>
+    <div id="screen" class="dirty crt">
+        <!--<video id="bgvid" muted="" loop="" preload="auto" src="media/bg-vid.mp4"></video>-->
+        <img id="bgpic" src="media/bg-pic.png" alt="submarine-background">
+
+        <main>
+            <!--<img id="tree" src="media/tree.png" alt="">-->
+            <div id="centerpanel">
+                <span id="fullTitle">
+                    <h2 class="cTitle" id="cTitle1"><span id="cTitle1Text"></span>
+                        <div id="cursor"></div>
+                    </h2>
+                    <h2 class="cTitle" id="cTitle2"><span id="cTitle2Text"></span></h2>
+                </span>
+
+                <div id="fullProgressBar">
+                    <div id="pLines">
+                        <div id="pBG"></div>
+                        <div id="pFill" class="checked"></div>
+                    </div>
+                    <div id="percentage">0.00%</div>
+                </div>
+
+                <div id="ETR">
+                    <div id="ETRLabel">CRUISING DEPTH IN ROUGHLY</div>
+                    <div id="ETRValue">00 days 00 hours 00 minutes 01 seconds</div>
+                </div>
+            </div>
+
+            <div id="btmright">
+                <div id="volumeSlider">
+                    <label id="volumeLabel">Volume:</label>
+                    <input type="range" min="0" max="100" value="80" id="volume" oninput="setVolume(this.value)">
+                </div>
+                <div id="fullscreen" onclick="toggleFullScreen()">⛶</div>                
+            </div>
+
+            <div id="urls">
+                <a href="https://ironlung.com/">Iron Lung</a>
+                <a href="https://youtu.be/fNda5ECVQ4g">Stream</a>
+                <a href="">GitHub</a>
+            </div>
+
+            <div id="connect" onclick="connect()">connect</div>
+        </main>
+    </div>
+
+    <script src="js/ui.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/audio.js"></script>
+</body>
+
+</html>

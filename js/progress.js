@@ -18,7 +18,8 @@ async function connect() {
 
     await sleep(500);
 
-    astartup.play();
+    astartup.play();    
+
 
     let cursor = document.getElementById('cursor');
     cursor.style.display = 'inline-block';
@@ -63,7 +64,10 @@ async function connect() {
     ETRValue.style.backgroundColor = 'var(--background01)';
     ETRValue.style.boxShadow = 'none';
 
-    startCountDown();
+    startCountDown();    
+
+    if(musicOn)
+        aMusic.play();
 }
 
 

@@ -131,6 +131,10 @@ main {
 
 
 
+.button {
+    user-select: none;
+    cursor: pointer;
+}
 
 #btmright {
     position: fixed;
@@ -143,6 +147,7 @@ main {
     display: inline;
     opacity: 0.5;
     transition: opacity 0.5s;
+    margin-left: 0.8rem;
 }
 
 #btmright div:hover {
@@ -159,10 +164,6 @@ main {
 #volume {
     display: inline;
     width: 10em;
-}
-
-#volumeLabel {
-    margin-left: 2em;
 }
 
 input[type="range"] {
@@ -194,12 +195,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 0;
 }
 
-#colorToggle{
-    user-select: none;
-}
-#colorToggle:hover{
-    cursor: pointer;
-}
+
 
 
 
@@ -215,6 +211,7 @@ input[type="range"]::-moz-range-thumb {
 #urls a {
     opacity: 0.5;
     transition: opacity 0.5s;
+    margin-right: 0.8rem;
 }
 
 #urls a:hover {

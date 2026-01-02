@@ -67,12 +67,13 @@
             </div>
 
             <div id="btmright">
-                <div id="colorToggle" onclick="toggleColor()">RED MODE</div>
+                <div id="colorToggle" class="button" onclick="toggleColor()">RED MODE</div>
+                <div id="musicToggle" class="button" onclick="toggleMusic()">MUSIC OFF</div>
                 <div id="volumeSlider">
                     <label id="volumeLabel">Volume:</label>
                     <input type="range" min="0" max="100" value="80" id="volume" oninput="setVolume(this.value)">
                 </div>
-                <div id="fullscreen" onclick="toggleFullScreen()">⛶</div>                
+                <div id="fullscreen" class="button" onclick="toggleFullScreen()">⛶</div>                
             </div>
 
             <div id="urls">

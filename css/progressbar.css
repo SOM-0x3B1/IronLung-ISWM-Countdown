@@ -2,7 +2,7 @@
     position: relative;
     width: 0%;
     max-width: 70ex;   
-    height: 45pt;
+    height: 10ex;
     margin-top: 7ex;
 
     left: 50%;
@@ -59,7 +59,7 @@
 
     color: var(--foreground02);
     font-family: 'disposabledroid_bbregular', 'VT323', monospace;
-    font-size: 46pt;
+    font-size: 3.3rem;
     letter-spacing: 4pt;
     text-align: right;
     text-shadow: var(--shadow);
